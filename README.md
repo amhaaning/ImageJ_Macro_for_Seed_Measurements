@@ -1,5 +1,5 @@
 # ImageJ_Macro_for_Seed_Measurements
-ImageJ macro to count seeds and neasure seed characteristics
+ImageJ macro to count seeds and neasure seed characteristics and R script to process results.
 
 Developed using images of seeds from five individual barley spikes.
 
