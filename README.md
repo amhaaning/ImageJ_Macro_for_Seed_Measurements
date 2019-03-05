@@ -13,29 +13,7 @@ Notes about images:
 
 1.	Make sure all images to be measured are in a single directory
 2.	Create a new directory for output images (images processed using macro)
-3.	Open ImageJ and make a new macro by selecting Plugins -> New -> Macro and paste in the following text:
-
-setBatchMode(true);
-dir = File.directory;
-name = File.nameWithoutExtension;
-run("Set Scale...", "distance=472.0678 known=40 pixel=1 unit=mm global");
-run("8-bit");
-setOption("BlackBackground", false);
-run("Convert to Mask");
-//setTool("wand");
-doWand(564, 894);
-floodFill(383, 862);
-run("Remove Outliers...", "radius=20 threshold=50 which=Dark");
-run("Fill Holes");
-run("Select None");
-run("Set Measurements...", "area perimeter fit redirect=None decimal=1");
-run("Analyze Particles...", "size=10-Infinity show=Ellipses display exclude in_situ");
-selectWindow("Results");
-saveAs("results",  dir + name + ".csv");
-run("Clear Results");
-close();
-setBatchMode(false);
-
+3.	Open ImageJ and make a new macro by selecting Plugins -> New -> Macro and paste in macro text:
 4.	Save new macro (e.g. Measure_Seeds_Macro.ijm)
 5.	Batch process all images with new macro. Select Process -> Batch -> Macro
 6.	Set input directory path (directory containing all images to be processed)
