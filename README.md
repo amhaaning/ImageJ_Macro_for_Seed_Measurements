@@ -6,9 +6,9 @@ Directions for counting seeds from five spikes and measuring length, width, area
 
 Notes about images:
 •	Seeds should not be touching
-•	If images contain labels, they need to be the same size and in the same location as the labels in the example images. If labels are not included, seeds should be kept out the region where the label is located in the example image.
+•	If images contain labels, they need to be the same size and in the same location as the labels in the example image. If labels are not included, seeds should be kept out the region where the label is located in the example image.
 •	Background should be dark compared to seeds.
-•	Scale was set in the macro using an image of a ruler at the same resolution – this line of the macro would need to be adjusted if a different resolution or scanner is used.
+•	Scale was set in the macro using an image of a ruler at the same resolution using the same scanner as the images – this line of the macro would need to be adjusted for specific scanner and resolution.
 •	Length and width of seeds are measured by fitting an ellipse to each seed.
 
 1.	Make sure all images to be measured are in a single directory
