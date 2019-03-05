@@ -1,0 +1,21 @@
+setBatchMode(true);
+dir = File.directory;
+name = File.nameWithoutExtension;
+run("Set Scale...", "distance=472.0678 known=40 pixel=1 unit=mm global");
+run("8-bit");
+setOption("BlackBackground", false);
+run("Convert to Mask");
+//setTool("wand");
+doWand(564, 894);
+floodFill(383, 862);
+run("Remove Outliers...", "radius=20 threshold=50 which=Dark");
+run("Fill Holes");
+run("Select None");
+run("Set Measurements...", "area perimeter fit redirect=None decimal=1");
+run("Analyze Particles...", "size=10-Infinity show=Ellipses display exclude in_situ");
+selectWindow("Results");
+saveAs("results",  dir + name + ".csv");
+run("Clear Results");
+close();
+setBatchMode(false);
+
