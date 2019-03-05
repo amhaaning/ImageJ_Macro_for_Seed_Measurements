@@ -21,4 +21,4 @@ Notes about images:
 7.	Set output directory path (will contain images processed by macro)
 8.	Select open and find new macro. Hit Process.
 9.	The macro will make files with individual seed measurements for each line.
-10.	Move individual measurement files to a new directory and use the R script Combine_and_analyze_stem_diameter.R to combine all files and generate summary statistics.
+10.	Move individual measurement files to a new directory and use the R script Combine_and_summarize_seed_data.R to combine all files and generate summary statistics.
